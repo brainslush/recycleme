@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="recycleme">
+    <Package name="Main">
+        <Key ID="STR_recycleme_Main_Author">
+            <English>=TSS= brainslush</English>
+            <German>=TSS= brainslush</German>
+            <Polish>=TSS= brainslush</Polish>
+            <Portuguese>=TSS= brainslush</Portuguese>
+            <Russian>=TSS= brainslush</Russian>
+            <Czech>=TSS= brainslush</Czech>
+            <Spanish>=TSS= brainslush</Spanish>
+            <Italian>=TSS= brainslush</Italian>
+            <French>=TSS= brainslush</French>
+            <Japanese>=TSS= brainslush</Japanese>
+            <Chinesesimp>=TSS= brainslush</Chinesesimp>
+            <Chinese>=TSS= brainslush</Chinese>
+            <Korean>=TSS= brainslush</Korean>
+        </Key>
+        <Key ID="STR_recycleme_Main_URL">
+            <English>http://github.com/brainslush/recycleme</English>
+            <German>http://github.com/brainslush/recycleme</German>
+            <Polish>http://github.com/brainslush/recycleme</Polish>
+            <Portuguese>http://github.com/brainslush/recycleme</Portuguese>
+            <Russian>http://github.com/brainslush/recycleme</Russian>
+            <Czech>http://github.com/brainslush/recycleme</Czech>
+            <Spanish>http://github.com/brainslush/recycleme</Spanish>
+            <Italian>http://github.com/brainslush/recycleme</Italian>
+            <French>http://github.com/brainslush/recycleme</French>
+            <Korean>http://github.com/brainslush/recycleme</Korean>
+            <Japanese>http://github.com/brainslush/recycleme</Japanese>
+            <Chinesesimp>http://github.com/brainslush/recycleme</Chinesesimp>
+            <Chinese>http://github.com/brainslush/recycleme</Chinese>
+        </Key>
+    </Package>
+</Project>

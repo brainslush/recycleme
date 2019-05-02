@@ -1,0 +1,12 @@
+name = "Recycle Me";
+picture = "logo.paa";
+actionName = "GitHub";
+action = "https://github.com/brainslush/recycleme";
+description = "Recycle Me";
+logo = "logo.paa";
+logoOver = "logo.paa";
+tooltip = "Recycle Me";
+tooltipOwned = "";
+overview = "Recycle Me lets you bring back the dead form their heavenly spectator mode to the dark grim earth.";
+author = "brainslush";
+overviewPicture = "logo.paa";

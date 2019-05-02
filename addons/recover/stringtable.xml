@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="recycleme">
+    <Package name="recover">
+        <Key ID="STR_recycleme_Recover_Category">
+            <English>Recycle Me</English>
+            <German>Recycle Me</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_SettingEnabledName">
+            <English>Enable</English>
+            <German>Aktivieren</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_SettingEnabledDesc">
+            <English>Player whose bodybag is recovered are able to respawn.</English>
+            <German>Spieler deren Leichensack zurueckgefuehrt wurde, koennen respawnen.</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_SettingCanReturnInName">
+            <English>Return location</English>
+            <German>Oertliche Zurueckfuhrungs</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_SettingCanReturnInDesc">
+            <English>Bodybags for respawns can be returned at the specified location.</English>
+            <German>Leichensaecke koennen an dem spezifizierten Ort zurueckgefuehrt werden.</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_SettingEverywhere">
+            <English>Everywhere</English>
+            <German>Ueberall</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_SettingACEFactility">
+            <English>ACE medical facility</English>
+            <German>Medizinische ACE-Einrichtung</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_SettingACEVehicle">
+            <English>ACE medical vehicle</English>
+            <German>Medizinisches ACE-Fahrzeug</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_SettingACEFacilityVehicle">
+            <English>ACE facility/vehicle</English>
+            <German>ACE Einrichtung/Fahrzeug</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_SettingDelayName">
+            <English>Respawn Delay</English>
+            <German>Respawnverzoegerung</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_SettingDelayDesc">
+            <English>Time delay until player can respawn after his body was returned in seconds.</English>
+            <German>Zeit in Sekunden bis zum Respawn des Spielers, nachdem seine Leiche zurueck gerfuehrt wurde.</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_Action">
+            <English>Return Bodybag</English>
+            <German>Leichensack zurueckfuehren</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_NotificationRespawnPartA">
+            <English>You will respawn in </English>
+            <German>Du wirst in </German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_NotificationRespawnPartB">
+            <English> seconds.</English>
+            <German> Sekunden respawnen.</German>
+        </Key>
+    </Package>
+</Project>
