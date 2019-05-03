@@ -15,22 +15,23 @@
  * Public: No
  */
 
-params["_target, _caller"];
+//params["_target, _caller"];
 
-if (!GVAR(enabled)) exitWith {false};
+if (!GVAR(Enabled)) exitWith {false};
 // check location
-private _isInFacility = (GVAR(canReturnIn) % 2 == 0) && {[_target] call ace_medical_fnc_isInMedicalFacility || [_caller] call ace_medical_fnc_isInMedicalFacility};
-private _isNearVehicle = (GVAR(canReturnIn) % 3 == 0) && {[_target] call FUNC(isNearMedicalVehicle) || [_caller] call FUNC(isNearMedicalVehicle)};
-private _canReturnHere = GVAR(canReturnIn) == -1 || {_isInFacility || _isNearVehicle};
+private _isInFacility = (GVAR(CanReturnIn) % 2 == 0) && {[_player] call ace_medical_fnc_isInMedicalFacility};
+private _isNearVehicle = (GVAR(CanReturnIn) % 3 == 0) && {[_target] call FUNC(isNearMedicalVehicle) || {[_caller] call FUNC(isNearMedicalVehicle)}};
+private _canReturnHere = GVAR(CanReturnIn) == -1 || {_isInFacility || {_isNearVehicle}};
 
 // check if bodybag belongs to a spectator
 private _isSpectatorBodybag = false;
 if (_canReturnHere) then {
-    private _bodybagName = (_target getVariable [GVARACE(dogtag,dogtagData),[]]) params [];
+    ([_target] call ace_dogtags_fnc_getDogtagData) params ["_bodybagName"];
     {
-        if ([_x] call ace_common_fnc_getName == _bodybagName) exitWith {
+        private _name = [_x] call ace_common_fnc_getName;
+        if (_name == _bodybagName) exitWith {
             _isSpectatorBodybag = true;
-            _target setVariable [QGVAR(spectator), _x];
+            _target setVariable [QGVAR(Spectator), _x, true];
         };
     } forEach ([] call ace_spectator_fnc_players);
 };

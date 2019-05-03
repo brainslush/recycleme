@@ -27,8 +27,6 @@
     LSTRING(Category),
     "0", // default value
     true, // isGlobal
-    {
-        GVAR(RespawnDelay) = parseNumber GVAR(Delay);
-    }
+    {GVAR(RespawnDelay) = parseNumber GVAR(Delay);}
 ] call CBA_settings_fnc_init;
 GVAR(RespawnDelay) = parseNumber GVAR(Delay);

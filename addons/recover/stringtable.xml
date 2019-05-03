@@ -49,6 +49,10 @@
             <English>Return Bodybag</English>
             <German>Leichensack zurueckfuehren</German>
         </Key>
+        <Key ID="STR_recycleme_Recover_ProgressText">
+            <English>Wololo</English>
+            <German>Wololo</German>
+        </Key>
         <Key ID="STR_recycleme_Recover_NotificationRespawnPartA">
             <English>You will respawn in </English>
             <German>Du wirst in </German>

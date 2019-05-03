@@ -1,27 +1,30 @@
 #include "script_component.hpp"
 
+// save global respawn time
+GVAR(RespawnTime) = if (isNumber(missionConfigFile >> "RespawnDelay")) then {
+    getNumber(missionConfigFile >> "RespawnDelay");
+} else {0}; 
+
 // add respawn event
 [
-    QGVAR(Respawn),
-    {
-        if (GVAR(RespawnDelay) >= 5)  then {
-            [LSTRING(NotificationRespawnPartA) + GVAR(RespawnDelay) + LSTRING(NotificationRespawnPartB)] call CBA_fnc_notify;
+    QGVAR(Respawn),{
+        if (GVAR(RespawnDelay) >= 5) then {
+            [[LLSTRING(NotificationRespawnPartA), GVAR(RespawnDelay), LLSTRING(NotificationRespawnPartB)] joinString " "] call CBA_fnc_notify;
         };
         [
             {
                 [false, false, false] call ace_spectator_fnc_setSpectator;
                 setPlayerRespawnTime 0;
-            },
-            [],
-            GVAR(RespawnDelay)
+                [{setPlayerRespawnTime GVAR(RespawnTime)}] call CBA_fnc_execNextFrame;
+            }, [], GVAR(RespawnDelay)
         ] call CBA_fnc_waitAndExecute;
     }
 ] call CBA_fnc_addEventHandler;
 
 // add ace interaction
 private _action = [
-    QGVAR(return),
-    LSTRING(Action),
+    QGVAR(Return),
+    LLSTRING(Action),
     QPATHTOF(ui\logo.paa),
     FUNC(returnBodybag),
     FUNC(canReturnBodybag)

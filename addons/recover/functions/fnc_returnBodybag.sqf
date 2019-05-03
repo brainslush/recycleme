@@ -17,8 +17,13 @@
 
 params ["_bodybag"];
 
-private _spectator = _bodybag getVariable [QGVAR(spectator), nullObj];
-if (_spectator == objNull) exitWith {};
-
-[QGVAR(respawn),[],_spectator] call CBA_fnc_targetEvent;
-deleteVehicle _bodybag;
+private _spectator = _bodybag getVariable [QGVAR(Spectator), objNull];
+[
+    5, [_bodybag, _spectator], {
+        params ["_data"];
+        _data params ["_bodybag", "_spectator"];
+        if (_spectator == objNull) exitWith {};
+        [QGVAR(Respawn), [], _spectator] call CBA_fnc_targetEvent;
+        deleteVehicle _bodybag;
+    }, {}, LLSTRING(ProgressText)
+] call ace_common_fnc_progressBar;
