@@ -9,7 +9,19 @@ GVAR(RespawnTime) = if (isNumber(missionConfigFile >> "RespawnDelay")) then {
 [
     QGVAR(Respawn),{
         if (GVAR(RespawnDelay) >= 5) then {
-            [[LLSTRING(NotificationRespawnPartA), GVAR(RespawnDelay), LLSTRING(NotificationRespawnPartB)] joinString " "] call CBA_fnc_notify;
+            private _minutes = floor(GVAR(RespawnDelay) / 60);
+            private _seconds = GVAR(RespawnDelay) % 60;
+            private _timeStr = str()
+            [[LLSTRING(NotificationRespawnPartA), GVAR(RespawnDelay), LLSTRING(NotificationRespawnPartBS)] joinString " "] call CBA_fnc_notify;
+
+            [
+
+            ] call CBA_fnc_addPerFrameHandler;
+            [
+                {
+                    [[LLSTRING(NotificationRespawnPartA), GVAR(RespawnDelay), LLSTRING(NotificationRespawnPartBM)] joinString " "] call CBA_fnc_notify;
+                }
+            ] call CBA_fnc_waitAndExecute;
         };
         [
             {

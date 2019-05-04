@@ -57,9 +57,13 @@
             <English>You will respawn in </English>
             <German>Du wirst in </German>
         </Key>
-        <Key ID="STR_recycleme_Recover_NotificationRespawnPartB">
+        <Key ID="STR_recycleme_Recover_NotificationRespawnPartBS">
             <English> seconds.</English>
             <German> Sekunden respawnen.</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_NotificationRespawnPartBM">
+            <English> minutes.</English>
+            <German> Minuten respawnen.</German>
         </Key>
     </Package>
 </Project>
