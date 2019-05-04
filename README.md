@@ -9,7 +9,7 @@ Requirements
 
 Usage
 ------
-By default the mod is disabled and needs to be enabled via the CBA addon settings. The dead body needs to packed into an ACE3 bodybag and returned to a location as specified in the CBA addon settings. There, it can be returned via an action in the ACE interaction menu. After the set respawn time has passed the player whose body was returned can respawn.
+By default, the mod is disabled and needs to be enabled via the CBA addon settings. The dead body needs to be packed into an ACE3 bodybag and returned to a location as specified in the CBA addon settings. There, it can be returned via an action in the ACE interaction menu. After the set respawn time has passed the player whose body was returned can respawn.
 
 License
 --------
