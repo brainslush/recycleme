@@ -24,10 +24,10 @@ if (CBA_missionTime < _expireTime) exitWith {_lastResult};
 // check
 private _isNearVehicle = false;
 {
-    if ((_vehicle getVariable [GVAR(MedicClass), getNumber (configFile >> "CfgVehicles" >> typeOf _x >> "attendant")]) > 0) exitWith {
+    if ((_x getVariable ["ace_medical_medicClass", getNumber(configFile >> "CfgVehicles" >> typeOf _x >> "attendant")]) > 0) exitWith {
         _isNearVehicle = true;
     };
-} forEach _unit nearObjects 7.5;
+} forEach (_unit nearObjects 7.5);
 
 // save cache
 _unit setVariable [QGVAR(CacheNearVehicle), [CBA_missionTime + 1, _isNearVehicle]];
