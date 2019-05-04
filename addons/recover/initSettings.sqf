@@ -30,3 +30,10 @@
     {GVAR(RespawnDelay) = parseNumber GVAR(Delay);}
 ] call CBA_settings_fnc_init;
 GVAR(RespawnDelay) = parseNumber GVAR(Delay);
+[
+    QGVAR(Notify), "CHECKBOX",
+    [LSTRING(SettingNotifyName), LSTRING(SettingNotifyDesc)],
+    LSTRING(Category),
+    true, // default value
+    false // isGlobal
+] call CBA_settings_fnc_init;

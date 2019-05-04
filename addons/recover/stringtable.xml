@@ -45,6 +45,14 @@
             <English>Time delay until player can respawn after his body was returned in seconds.</English>
             <German>Zeit in Sekunden bis zum Respawn des Spielers, nachdem seine Leiche zurueck gerfuehrt wurde.</German>
         </Key>
+        <Key ID="STR_recycleme_Recover_SettingNotifyName">
+            <English>Notfiy</English>
+            <German>Benachrichtigen</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_SettingNotifyDesc">
+            <English>Spectators will be notified about the time until respawn.</English>
+            <German>Zuschauer werden ueber die verbleibende Zeit bis zum Respawn benachrichtigt.</German>
+        </Key>
         <Key ID="STR_recycleme_Recover_Action">
             <English>Return Bodybag</English>
             <German>Leichensack zurueckfuehren</German>
@@ -58,8 +66,12 @@
             <German>Du wirst in </German>
         </Key>
         <Key ID="STR_recycleme_Recover_NotificationRespawnPartB">
-            <English> seconds.</English>
-            <German> Sekunden respawnen.</German>
+            <English> .</English>
+            <German> respawnen.</German>
+        </Key>
+        <Key ID="STR_recycleme_Recover_NotificationRespawnPartBM">
+            <English> minutes.</English>
+            <German> Minuten respawnen.</German>
         </Key>
     </Package>
 </Project>

@@ -8,9 +8,43 @@ GVAR(RespawnTime) = if (isNumber(missionConfigFile >> "RespawnDelay")) then {
 // add respawn event
 [
     QGVAR(Respawn),{
-        if (GVAR(RespawnDelay) >= 5) then {
-            [[LLSTRING(NotificationRespawnPartA), GVAR(RespawnDelay), LLSTRING(NotificationRespawnPartB)] joinString " "] call CBA_fnc_notify;
+        // handle notifications
+        private _notifyPrior = {
+            params["_notifyTime"];
+
+            private _seconds = _notifyTime * 60;
+            if (GVAR(RespawnDelay) > _seconds) then {
+                [
+                    {   
+                        if (GVAR(Notify)) then {
+                            [[
+                                LLSTRING(NotificationRespawnPartA),
+                                _this,
+                                LLSTRING(NotificationRespawnPartBM)
+                            ] joinString " "] call CBA_fnc_notify;
+                        };
+                    }, _notifyTime, GVAR(RespawnDelay) - _seconds
+                ] call CBA_fnc_waitAndExecute;
+            };
         };
+
+        private _minutes = floor(GVAR(RespawnDelay) / 60);
+        private _seconds = GVAR(RespawnDelay) % 60;
+        private _notifyTimes = [60, 45, 30, 15, 10, 5, 1];
+
+        if (GVAR(RespawnDelay) >= 5) then {
+            if (GVAR(Notify) && {!(_minutes in _notifyTimes) || {_seconds > 5}}) then {
+                [[
+                    LLSTRING(NotificationRespawnPartA),
+                    str(_minutes) + ":" + str(_seconds),
+                    LLSTRING(NotificationRespawnPartB)
+                ] joinString " "] call CBA_fnc_notify;
+            };
+            {
+                [_x] call _notifyPrior;
+            } forEach _notifyTimes;
+        };
+        // handle respawn
         [
             {
                 [false, false, false] call ace_spectator_fnc_setSpectator;
