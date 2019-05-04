@@ -40,9 +40,3 @@ workflows:
       - armake:
           requires:
             - validate-scripts
-      - update-docs:
-          requires:
-            - armake
-          filters:
-            branches:
-              only: master
